@@ -2,6 +2,13 @@
 //!
 //! Check [`encode`] and [`decode`] docs for example usage
 
+#![no_std]
+
+extern crate alloc;
+use alloc::string::String;
+use alloc::vec::Vec;
+use alloc::vec;
+
 /// Bitmask that contains allowed character set
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
 pub struct Bitmask(pub [u32; 3]);
